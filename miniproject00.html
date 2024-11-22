@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Management App</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Task Manager</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#tasks-dashboard">Tasks</a></li>
+        <li class="nav-item"><a class="nav-link" href="#register">Register</a></li>
+        <li class="nav-item"><a class="nav-link" href="#login">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Jumbotron -->
+  <div class="jumbotron text-center">
+    <h1 class="display-4">Welcome to Task Manager</h1>
+    <p class="lead">Manage your tasks efficiently and stay organized!</p>
+  </div>
+
+  <!-- Cards for Key Features -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200?text=Task+Dashboard" class="card-img-top" alt="Task Dashboard">
+          <div class="card-body">
+            <h5 class="card-title">Task Dashboard</h5>
+            <p class="card-text">View and manage all your tasks in one place.</p>
+            <a href="#tasks-dashboard" class="btn btn-primary">View Dashboard</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200?text=Create+Task" class="card-img-top" alt="Create Task">
+          <div class="card-body">
+            <h5 class="card-title">Create Task</h5>
+            <p class="card-text">Add new tasks and stay organized.</p>
+            <a href="#task-creation" class="btn btn-primary">Create Task</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200?text=Reports" class="card-img-top" alt="Reports">
+          <div class="card-body">
+            <h5 class="card-title">Task Reports</h5>
+            <p class="card-text">Generate detailed reports on task progress.</p>
+            <a href="#task-reports" class="btn btn-primary">View Reports</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Task Dashboard Page -->
+  <div class="container mt-4" id="tasks-dashboard">
+    <h2>Task Dashboard</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-header">Task 1</div>
+          <div class="card-body">
+            <p>Task details...</p>
+            <button class="btn btn-info">Edit</button>
+            <button class="btn btn-danger">Delete</button>
+          </div>
+        </div>
+      </div>
+      <!-- Repeat for more tasks -->
+    </div>
+  </div>
+
+  <!-- Task Creation Page -->
+  <div class="container mt-4" id="task-creation">
+    <h2>Create New Task</h2>
+    <form>
+      <div class="form-group">
+        <label for="taskName">Task Name</label>
+        <input type="text" class="form-control" id="taskName" placeholder="Task name" required>
+      </div>
+      <div class="form-group">
+        <label for="taskDescription">Description</label>
+        <textarea class="form-control" id="taskDescription" rows="3" placeholder="Task description" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="taskPriority">Priority</label>
+        <select class="form-control" id="taskPriority" required>
+          <option>Low</option>
+          <option>Medium</option>
+          <option>High</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Create Task</button>
+    </form>
+  </div>
+
+  <!-- Register Page -->
+  <div class="container mt-4" id="register">
+    <h2>Register</h2>
+    <form>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" id="username" placeholder="Username" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="Email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Password" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Sign Up</button>
+    </form>
+  </div>
+
+  <!-- Authentication Page -->
+  <div class="container mt-4" id="login">
+    <h2>Login</h2>
+    <form>
+      <div class="form-group">
+        <label for="loginUsername">Username</label>
+        <input type="text" class="form-control" id="loginUsername" placeholder="Username" required>
+      </div>
+      <div class="form-group">
+        <label for="loginPassword">Password</label>
+        <input type="password" class="form-control" id="loginPassword" placeholder="Password" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center mt-4 py-4 bg-light">
+    <p>&copy; 2024 Task Manager App</p>
+  </footer>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
